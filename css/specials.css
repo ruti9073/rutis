@@ -1,0 +1,9 @@
+.row{display:flex;align-items:center;gap:4%;margin-bottom:4rem;animation:fadeUp .9s both}
+.row:nth-of-type(even){flex-direction:row-reverse}
+.row>img{width:48%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);transition:transform .5s,filter .5s}
+.row>img:hover{transform:rotate(-1.5deg) scale(1.02);filter:contrast(1.05)}
+.row>div{width:48%}
+.note{text-align:center;padding:2rem;background:var(--blush);border-radius:var(--radius)}
+.note p{margin:0}
+@media (max-width:900px){.row>img,.row>div{width:100%}.row,.row:nth-of-type(even){flex-direction:column}}
+@media (max-width:640px){.row>img{aspect-ratio:4/3}}

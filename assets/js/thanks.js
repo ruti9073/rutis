@@ -1,0 +1,1 @@
+const n=new URLSearchParams(location.search).get("name");const s=document.querySelector(".thanks-name");if(n&&s)s.textContent=" "+n.split(" ")[0];

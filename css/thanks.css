@@ -1,0 +1,5 @@
+.thanks{max-width:60%;margin:3rem auto;padding:3rem 2rem;text-align:center;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow)}
+.check{display:grid;place-content:center;width:84px;aspect-ratio:1;margin:0 auto 1.5rem;border-radius:50%;background:var(--navy);color:#fff;font-size:2.4rem;animation:pop .7s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes pop{from{transform:scale(0)}to{transform:scale(1)}}
+@media (max-width:900px){.thanks{max-width:90%}}
+@media (max-width:640px){.thanks{padding:2rem 1rem}}

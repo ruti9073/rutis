@@ -1,0 +1,80 @@
+/* ===== משתנים ===== */
+:root{--ivory:#faf8f4;--ink:#1c2230;--navy:#1d3258;--navy-deep:#13213c;--gold:#c9a96a;--blush:#f3ede2;--muted:#6f685f;--radius:14px;--shadow:0 12px 30px rgba(42,39,36,.10);--serif:"Frank Ruhl Libre",serif;--sans:"Heebo",system-ui,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-weight:300;line-height:1.75;color:var(--ink);background:var(--ivory)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.25;margin:0 0 .5em}
+h1{font-size:clamp(2.1rem,5.5vw,3.8rem);letter-spacing:-.01em}h2{font-size:clamp(1.5rem,3vw,2.1rem)}h3{font-size:1.2rem}
+p{margin:0 0 1em}
+a{color:var(--navy)}
+/* ===== כותרת עליונה ===== */
+.site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:.7rem 5%;background:rgba(19,33,60,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--gold)}
+.logo{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--ivory)}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo img{width:58px;height:58px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px var(--gold)}
+.logo-text strong{font:700 1.8rem "Cormorant Garamond",serif;letter-spacing:.02em}
+.logo-text small{color:var(--gold);letter-spacing:.06em;font-size:.8rem}
+.main-nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0}
+.main-nav a{position:relative;text-decoration:none;color:var(--ivory);font-weight:400;padding:.3rem 0}
+.main-nav a::after{content:"";position:absolute;inset:auto 0 0 auto;width:0;height:2px;background:var(--gold);transition:width .35s}
+.main-nav a:hover::after,.main-nav a[aria-current="page"]::after{width:100%}
+.main-nav li:last-child a{background:var(--gold);color:var(--navy-deep);padding:.45rem 1.5rem;border-radius:50px;transition:background .3s}
+.main-nav li:last-child a:hover{background:#fff}
+.main-nav li:last-child a::after{display:none}
+.more{margin-top:.6rem;font-weight:400;text-decoration:none;color:var(--gold);transition:letter-spacing .3s}
+.more:hover{letter-spacing:.06em}
+.btn-light{background:var(--ivory);color:var(--ink);border-color:var(--ivory)}
+.menu-toggle{display:none}
+.burger{display:none;cursor:pointer;padding:.6rem}
+.burger span,.burger span::before,.burger span::after{display:block;width:26px;height:2px;background:var(--ivory);position:relative;content:""}
+.burger span::before{position:absolute;top:-8px}.burger span::after{position:absolute;top:8px}
+/* ===== תוכן ===== */
+main{width:90%;max-width:1200px;margin:0 auto;padding:3rem 0}
+main>section{margin-bottom:5rem;animation:fadeUp .9s both}
+main>section:nth-child(2){animation-delay:.15s}main>section:nth-child(3){animation-delay:.3s}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.page-head{text-align:center;max-width:60%;margin-inline:auto}
+.eyebrow{color:var(--gold);letter-spacing:.2em;font-size:.85rem;text-transform:uppercase;margin-bottom:.6rem}
+.section-title{text-align:center;margin-bottom:2rem}
+.section-title::after{content:"✦";display:block;color:var(--gold);font-size:1rem;margin:.5rem auto 0}
+.center{text-align:center}
+.btn{display:inline-block;padding:.8rem 2rem;border:1px solid var(--navy);background:var(--navy);color:#fff;border-radius:50px;font:400 1rem var(--sans);text-decoration:none;cursor:pointer;transition:transform .3s,box-shadow .3s,background .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.btn-ghost{background:transparent;color:var(--navy)}.btn-ghost:hover{background:var(--navy);color:#fff}
+/* ===== כרטיסי מוצר ===== */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.card{margin:0;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(201,169,106,.45);transition:transform .4s,box-shadow .4s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(19,33,60,.22)}
+.card img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s,filter .6s}
+.card:hover img{transform:scale(1.05);filter:saturate(1.15)}
+.card figcaption{display:flex;flex-direction:column;padding:1rem 1.3rem 1.3rem}
+.card figcaption strong{font-family:var(--serif);font-size:1.15rem}
+.card figcaption span{color:var(--muted);font-size:.92rem}
+.tags{display:flex;gap:.5rem;list-style:none;padding:0;margin:1rem 0 0}
+.tags li{padding:.1rem .9rem;border:1px solid var(--gold);color:var(--gold);border-radius:50px;font-size:.85rem}
+/* ===== כותרת תחתונה ===== */
+.site-footer{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:2.4rem 5%;background:var(--navy-deep);border-top:2px solid var(--gold);color:#d6dbe6;text-align:center;font-size:.92rem}
+.site-footer p{margin:0}.site-footer a{color:var(--gold);text-decoration:none}
+.site-footer a[href^="tel:"]::before{content:"☎ "}
+.site-footer a[href^="mailto:"]::before{content:"✉ "}
+.site-footer a[download]::before{content:"⬇ "}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,1fr)}.page-head{max-width:90%}.main-nav ul{gap:1.2rem}}
+@media (max-width:640px){
+.burger{display:block}
+.main-nav{flex-basis:100%;display:none}
+.menu-toggle:checked~.main-nav{display:block}
+.main-nav ul{flex-direction:column;gap:.4rem;padding-bottom:.8rem}
+.gallery{grid-template-columns:100%}
+.site-footer{grid-template-columns:100%}
+main{padding:2rem 0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.page-head{padding-bottom:1rem}
+.page-head h1{color:var(--navy)}
+.page-head::after{content:"";display:block;width:90px;height:1px;background:var(--gold);margin:1.6rem auto 0}
+.brandmark{margin:0 0 1.5rem}
+.brandmark img{width:100%;border-radius:var(--radius);box-shadow:var(--shadow)}
+@media (max-width:640px){.site-footer p{padding:.2rem 0}}
+.eyebrow{text-transform:none}

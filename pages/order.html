@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>הזמנה | Ruti&#39;s</title>
+<meta name="description" content="Ruti&#39;s – עיצוב מגשי פירות וירקות בעבודת יד לאירועים ולמתנות">
+<link rel="icon" href="../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Cormorant+Garamond:wght@600;700&family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css"><link rel="stylesheet" href="../css/order.css">
+</head>
+<body>
+<header class="site-header">
+<a class="logo" href="../index.html"><img src="../assets/images/logo-round.png" alt="לוגו Ruti&#39;s" width="46" height="46"><span class="logo-text"><strong>Ruti&#39;s</strong><small>אומנות עיצוב הפרי</small></span></a>
+<input type="checkbox" class="menu-toggle" id="menu" aria-label="פתיחת תפריט">
+<label for="menu" class="burger" aria-hidden="true"><span></span></label>
+<nav class="main-nav" aria-label="תפריט ראשי"><ul><li><a href="../index.html">בית</a></li><li><a href="fruit-trays.html">מגשי פירות</a></li><li><a href="specials.html">עיצובים מיוחדים</a></li><li><a href="about.html">אודות</a></li><li><a href="order.html" aria-current="page">הזמנה</a></li></ul></nav>
+</header>
+<main>
+<section class="page-head"><p class="eyebrow">הזמנה</p><h1>הזמנת מגש</h1><p>ממלאים את הפרטים ואני חוזרת אליכם לאישור סופי.</p></section>
+<form class="order-form" action="thanks.html" method="get">
+<fieldset><legend>פרטי קשר</legend>
+<label>שם מלא<input type="text" name="name" required minlength="2" maxlength="40" placeholder="לדוגמה: רחל כהן" autocomplete="name"></label>
+<label>טלפון נייד<input type="tel" name="phone" required pattern="05[0-9]{8}" placeholder="0501234567" title="מספר נייד של 10 ספרות המתחיל ב-05"></label>
+<label>אימייל<input type="email" name="email" required placeholder="name@example.com"></label>
+</fieldset>
+<fieldset><legend>פרטי האירוע</legend>
+<label>תאריך אספקה<input type="date" name="date" required min="2026-11-09"></label>
+<label>שעה<input type="time" name="time" min="08:00" max="21:00" required></label>
+<label>סוג האירוע<select name="event" required><option value="">בחרו…</option><option>שבת / חג</option><option>יום הולדת</option><option>אירוע משפחתי</option><option>מתנה</option></select></label>
+<label>מספר סועדים<input type="number" name="guests" min="2" max="60" value="8" required></label>
+</fieldset>
+<fieldset><legend>המגש</legend>
+<div class="choices"><label><input type="radio" name="tray" value="fruit" checked>מגש פירות</label><label><input type="radio" name="tray" value="veg">מגש ירקות</label><label><input type="radio" name="tray" value="gift">מארז מתנה</label></div>
+<label>פרי אהוב<input type="text" name="fav" list="fruits" placeholder="התחילו להקליד…"></label>
+<datalist id="fruits"><option value="אבטיח"><option value="מלון"><option value="ענבים"><option value="קיווי"><option value="אננס"><option value="ליצ׳י"></datalist>
+<label>צבע מוביל<input type="color" name="color" value="#d9534f"></label>
+<div class="choices"><label><input type="checkbox" name="extra" value="engrave">חריטת שם</label><label><input type="checkbox" name="extra" value="bag">ארוז למתנה</label></div>
+<label class="full">הערות ובקשות מיוחדות<textarea name="notes" rows="4" maxlength="300" placeholder="אלרגיות, שם לחריטה, סגנון רצוי…"></textarea></label>
+</fieldset>
+<div class="actions"><button type="reset" class="btn btn-ghost">איפוס</button><button type="submit" class="btn">שליחת הזמנה</button></div>
+</form>
+</main>
+<footer class="site-footer">
+<p>© כל הזכויות שמורות – Ruti&#39;s</p>
+<p><a href="about.html">אודות</a> · <a href="../assets/files/catalog.pdf" download>הורדת קטלוג (PDF)</a></p>
+<p><a href="mailto:r0556729073@gmail.com">r0556729073@gmail.com</a> · <a href="tel:+972556729073">055-6729073</a></p>
+</footer>
+
+</body>
+</html>
